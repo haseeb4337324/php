@@ -1,4 +1,4 @@
-```php
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +45,7 @@
 
     <?php
 
-    class Mango
+    class Fruits
     {
         public $color;
         public $price;
@@ -57,7 +57,7 @@
         }
     }
 
-    class Fruits extends Mango
+    class Mango extends Fruits
     {
         public $name;
 
@@ -68,7 +68,7 @@
         }
     }
 
-    $p = new Fruits("Yellow", 200, "Mango");
+    $p = new Mango("Yellow", 200, "Mango");
 
     echo "Color: " . $p->color . "<br>";
     echo "Price: " . $p->price . "<br>";
@@ -188,14 +188,14 @@
 
     class Student
     {
-        private $name;
+        protected $name;
 
-        public function setName($n)
+        protected function setName($n)
         {
             $this->name = $n;
         }
 
-        public function getName()
+        protected function getName()
         {
             return $this->name;
         }
